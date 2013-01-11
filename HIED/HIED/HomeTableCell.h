@@ -23,9 +23,15 @@
 @property (strong, nonatomic) IBOutlet UILabel *topicLabel;
 @property (strong, nonatomic) IBOutlet UILabel *starCSLabel;
 @property (strong, nonatomic) IBOutlet UILabel *sponsorLabel;
-@property (strong, nonatomic) IBOutlet UILabel *starCountLabel;
-@property (strong, nonatomic) IBOutlet UILabel *commentCountLabel;
+//@property (strong, nonatomic) IBOutlet UILabel *starCountLabel;
+@property (strong, nonatomic) IBOutlet UILabel *starLabel;
+//@property (strong, nonatomic) IBOutlet UILabel *commentCountLabel;
+@property (strong, nonatomic) IBOutlet UILabel *smallCommentLabel;
 @property (strong, nonatomic) IBOutlet UIButton *smallStarButton;
 @property (strong, nonatomic) IBOutlet UIButton *smallCommentButton;
+@property (strong, nonatomic) IBOutlet UIButton *comments;
+@property (strong, nonatomic) IBOutlet UIButton *sponsor;
+@property (strong, nonatomic) IBOutlet UIButton *star;
+@property (strong, nonatomic) IBOutlet UIButton *smallComment;
 
 @end

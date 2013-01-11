@@ -199,26 +199,12 @@
     cell.sponsorLabel.text = @"Sponsored by: BearRabbit";
     cell.sponsorLabel.font = [UIFont fontWithName:@"palatino" size:10];
     
-    cell.starCountLabel.text = @"15";
-    cell.starCountLabel.font = [UIFont fontWithName:@"palatino" size:10];
+    cell.starCSLabel.text = @"15";
+    cell.starCSLabel.font = [UIFont fontWithName:@"palatino" size:10];
     
-    cell.commentCountLabel.text = @"222";
-    cell.commentCountLabel.font = [UIFont fontWithName:@"palatino" size:10];
+    cell.smallCommentLabel.text = @"222";
+    cell.smallCommentLabel.font = [UIFont fontWithName:@"palatino" size:10];
 
-    
-//    cell.timeLabel.text = [[news objectAtIndex:indexPath.row] objectForKey:@"published_on"];//@"time";
-//    cell.urlLabel.text = @"url.com";
-//    cell.authorLabel.text = @"chompsky";
-//    cell.topicLabel.text = @"BEES KNEES";
-//    cell.starCSLabel.text = @"blah blah shit";
-//    cell.sponsorLabel.text = @"Ben Affleck";
-//    cell.commentCountLabel.text = @"6";
-//    cell.starCountLabel.text = @"66";
-    
-//    cell.nameLabel.text = [tableData objectAtIndex:indexPath.row];
-//    cell.thumbnailImageView.image = [UIImage imageNamed:[thumbnails objectAtIndex:indexPath.row]];
-//    cell.prepTimeLabel.text = [prepTime objectAtIndex:indexPath.row];
-    
     CGSize size = [cell.titleLabel.text sizeWithFont:cell.titleLabel.font constrainedToSize:CGSizeMake(cell.titleLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
     cell.titleLabel.frame =   CGRectMake(cell.titleLabel.frame.origin.x,cell.titleLabel.frame.origin.y,cell.titleLabel.frame.size.width,size.height);
     
@@ -228,34 +214,60 @@
     size = [cell.starCSLabel.text sizeWithFont:cell.starCSLabel.font constrainedToSize:CGSizeMake(cell.starCSLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
     cell.starCSLabel.frame =   CGRectMake(cell.starCSLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+20,cell.starCSLabel.frame.size.width,size.height);
     
-    size = [cell.starCountLabel.text sizeWithFont:cell.starCountLabel.font constrainedToSize:CGSizeMake(cell.starCountLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
-    cell.starCountLabel.frame =   CGRectMake(cell.starCountLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+20,cell.starCountLabel.frame.size.width,size.height);
+    size = [cell.starLabel.text sizeWithFont:cell.starLabel.font constrainedToSize:CGSizeMake(cell.starLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
+    cell.starLabel.frame =   CGRectMake(cell.starLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+20,cell.starLabel.frame.size.width,size.height);
     
-    size = [cell.commentCountLabel.text sizeWithFont:cell.commentCountLabel.font constrainedToSize:CGSizeMake(cell.commentCountLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
-    cell.commentCountLabel.frame =   CGRectMake(cell.commentCountLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+20,cell.commentCountLabel.frame.size.width,size.height);
+    size = [cell.smallCommentLabel.text sizeWithFont:cell.smallCommentLabel.font constrainedToSize:CGSizeMake(cell.smallCommentLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
+    cell.smallCommentLabel.frame =   CGRectMake(cell.smallCommentLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+20,cell.smallCommentLabel.frame.size.width,size.height);
     
     size = [cell.sponsorLabel.text sizeWithFont:cell.sponsorLabel.font constrainedToSize:CGSizeMake(cell.sponsorLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
     cell.sponsorLabel.frame =   CGRectMake(cell.sponsorLabel.frame.origin.x,cell.starCSLabel.frame.origin.y+cell.starCSLabel.frame.size.height+30,cell.sponsorLabel.frame.size.width,size.height);
     
-    cell.smallCommentButton.frame = CGRectMake(cell.smallCommentButton.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+10,31,31);
+    cell.comments.frame = CGRectMake(cell.comments.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+10,31,31);
     
-    cell.smallStarButton.frame = CGRectMake(cell.smallStarButton.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+18,15,13);
+    cell.star.frame = CGRectMake(cell.star.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+18,15,13);
     
-    cell.commentCountLabel.frame = CGRectMake(cell.commentCountLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+18,15,13);
+    cell.smallComment.frame = CGRectMake(cell.smallComment.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+18,15,13);
     
-    cell.sponsorLabel.frame = CGRectMake(cell.sponsorLabel.frame.origin.x,cell.commentCountLabel.frame.origin.y+cell.commentCountLabel.frame.size.height+10,31,31);
-
-//    cellHeight = 0.0;
+    cell.sponsor.frame = CGRectMake(cell.sponsor.frame.origin.x,cell.comments.frame.origin.y+cell.comments.frame.size.height+10,31,31);
+    
+//    CGSize size = [cell.titleLabel.text sizeWithFont:cell.titleLabel.font constrainedToSize:CGSizeMake(cell.titleLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
+//    cell.titleLabel.frame =   CGRectMake(cell.titleLabel.frame.origin.x,cell.titleLabel.frame.origin.y,cell.titleLabel.frame.size.width,size.height);
 //    
-//    for (UIView* view in cell.subviews)
-//        cellHeight += view.frame.size.height;
+//    size = [cell.articleLabel.text sizeWithFont:cell.articleLabel.font constrainedToSize:CGSizeMake(cell.articleLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
+//    cell.articleLabel.frame =   CGRectMake(cell.articleLabel.frame.origin.x,cell.titleLabel.frame.origin.y+cell.titleLabel.frame.size.height+10,cell.articleLabel.frame.size.width,size.height);
 //    
-//    cellHeight -= 30.0;
+//    size = [cell.starCSLabel.text sizeWithFont:cell.starCSLabel.font constrainedToSize:CGSizeMake(cell.starCSLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
+//    cell.starCSLabel.frame =   CGRectMake(cell.starCSLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+20,cell.starCSLabel.frame.size.width,size.height);
 //    
-////    NSLog(@"%f", cellHeight);
+//    size = [cell.starLabel.text sizeWithFont:cell.starLabel.font constrainedToSize:CGSizeMake(cell.starLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
+//    cell.starLabel.frame =   CGRectMake(cell.starLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+20,cell.starLabel.frame.size.width,size.height);
+//    
+//    size = [cell.smallCommentLabel.text sizeWithFont:cell.smallCommentLabel.font constrainedToSize:CGSizeMake(cell.smallCommentLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
+//    cell.smallCommentLabel.frame =   CGRectMake(cell.smallCommentLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+20,cell.smallCommentLabel.frame.size.width,size.height);
+//    
+//    size = [cell.sponsorLabel.text sizeWithFont:cell.sponsorLabel.font constrainedToSize:CGSizeMake(cell.sponsorLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
+//    cell.sponsorLabel.frame =   CGRectMake(cell.sponsorLabel.frame.origin.x,cell.starCSLabel.frame.origin.y+cell.starCSLabel.frame.size.height+30,cell.sponsorLabel.frame.size.width,size.height);
+//    
+//    cell.smallCommentButton.frame = CGRectMake(cell.smallCommentButton.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+10,31,31);
+//    
+//    cell.smallStarButton.frame = CGRectMake(cell.smallStarButton.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+18,15,13);
+//    
+//    cell.smallCommentLabel.frame = CGRectMake(cell.smallCommentLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+18,15,13);
+//    
+//    cell.sponsorLabel.frame = CGRectMake(cell.sponsorLabel.frame.origin.x,cell.smallCommentLabel.frame.origin.y+cell.smallCommentLabel.frame.size.height+10,31,31);
 //
-////    [cellHeightArray addObject:cellHeight];
-////    [key release];
+////    cellHeight = 0.0;
+////    
+////    for (UIView* view in cell.subviews)
+////        cellHeight += view.frame.size.height;
+////    
+////    cellHeight -= 30.0;
+////    
+//////    NSLog(@"%f", cellHeight);
+////
+//////    [cellHeightArray addObject:cellHeight];
+//////    [key release];
     
     return cell;
 }
