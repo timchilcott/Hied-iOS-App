@@ -17,7 +17,7 @@
     IBOutlet UILabel *urlLabel;
     IBOutlet UILabel *authorLabel;
     IBOutlet UILabel *topicLabel;
-    IBOutlet UILabel *topicLabel2;
+//    IBOutlet UILabel *topicLabel2;
     IBOutlet UILabel *articleLabel;
     IBOutlet UILabel *starCSLabel;
     IBOutlet UILabel *sponsorLabel;

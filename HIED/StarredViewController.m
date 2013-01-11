@@ -8,7 +8,7 @@
 
 #import "StarredViewController.h"
 #import "IIViewDeckController.h"
-#import "ArticleViewController.h"
+//#import "ArticleViewController.h"
 #import "DejalActivityView.h"
 #import "ViewController.h"
 #import "EGORefreshTableHeaderView.h"

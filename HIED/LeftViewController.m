@@ -6,7 +6,7 @@
 
 #import "LeftViewController.h"
 #import "IIViewDeckController.h"
-#import "VDTAppDelegate.h"
+#import "AppDelegate.h"
 
 @implementation LeftViewController
 

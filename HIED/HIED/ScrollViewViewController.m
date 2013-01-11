@@ -8,7 +8,6 @@
 
 #import "ScrollViewViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "PullViewController.h"
 #import "IIViewDeckController.h"
 #import "DejalActivityView.h"
 #import "ViewController.h"
@@ -144,15 +143,6 @@
 {
     [self.navigationController setNavigationBarHidden:!self.navigationController.navigationBarHidden animated:YES];
 
-    if (!self.navigationController.navigationBarHidden){
-        topicLabel.backgroundColor = [UIColor colorWithRed:61.0 green:43.0 blue:36.0 alpha:0.0];
-//        topicLabel.hidden = NO;4r fv4c//        topicLabel2.hidden = NO;
-//        [topicLabel setBackgroundColor:[UIColor ]]
-    }else{
-        topicLabel.backgroundColor = [UIColor colorWithRed:61.0 green:43.0 blue:36.0 alpha:1.0f];
-//        topicLabel.hidden = YES;
-//        topicLabel2.hidden = YES;
-    }
 }
 
 - (void)didReceiveMemoryWarning {

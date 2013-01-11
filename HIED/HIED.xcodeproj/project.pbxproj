@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F0754D516911CAA00C28E63 /* HomeScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0754D316911CAA00C28E63 /* HomeScrollViewController.m */; };
-		4F0754D616911CAA00C28E63 /* HomeScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F0754D416911CAA00C28E63 /* HomeScrollViewController.xib */; };
+		4F0754D516911CAA00C28E63 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0754D316911CAA00C28E63 /* HomeViewController.m */; };
+		4F0754D616911CAA00C28E63 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F0754D416911CAA00C28E63 /* HomeViewController.xib */; };
+		4F105045169F9E640099D3F7 /* HomeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F105044169F9E640099D3F7 /* HomeTableCell.xib */; };
+		4F105048169F9FCF0099D3F7 /* HomeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F105047169F9FCE0099D3F7 /* HomeTableCell.m */; };
 		4F38E04B16914AC10040D089 /* Hied_icon_sepia.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F38E04A16914AC10040D089 /* Hied_icon_sepia.png */; };
 		4F87B0DD169E31220029557C /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F87B0D9169E31220029557C /* blackArrow.png */; };
 		4F87B0DE169E31220029557C /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F87B0DA169E31220029557C /* blackArrow@2x.png */; };
@@ -79,19 +81,11 @@
 		4FC2A33016781A2B00DC5D14 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC2A32F16781A2B00DC5D14 /* Default.png */; };
 		4FC2A33216781A2B00DC5D14 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC2A33116781A2B00DC5D14 /* Default@2x.png */; };
 		4FC2A33416781A2B00DC5D14 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC2A33316781A2B00DC5D14 /* Default-568h@2x.png */; };
-		4FC2A34B16781A5B00DC5D14 /* VDTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC2A34116781A5B00DC5D14 /* VDTAppDelegate.m */; };
-		4FC2A34C16781A5B00DC5D14 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC2A34316781A5B00DC5D14 /* ArticleViewController.m */; };
-		4FC2A34D16781A5B00DC5D14 /* ArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FC2A34416781A5B00DC5D14 /* ArticleViewController.xib */; };
-		4FC2A35016781A5B00DC5D14 /* PullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC2A34916781A5B00DC5D14 /* PullViewController.m */; };
-		4FC2A35116781A5B00DC5D14 /* PullViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FC2A34A16781A5B00DC5D14 /* PullViewController.xib */; };
+		4FC2A34B16781A5B00DC5D14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC2A34116781A5B00DC5D14 /* AppDelegate.m */; };
 		4FC2A38F16781AC500DC5D14 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC2A37716781AC500DC5D14 /* LeftViewController.m */; };
 		4FC2A39016781AC500DC5D14 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FC2A37816781AC500DC5D14 /* LeftViewController.xib */; };
-		4FC2A39116781AC500DC5D14 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC2A37A16781AC500DC5D14 /* HomeViewController.m */; };
-		4FC2A39216781AC500DC5D14 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FC2A37B16781AC500DC5D14 /* HomeViewController.xib */; };
 		4FC2A39316781AC500DC5D14 /* StarredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC2A37D16781AC500DC5D14 /* StarredViewController.m */; };
 		4FC2A39416781AC500DC5D14 /* StarredViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FC2A37E16781AC500DC5D14 /* StarredViewController.xib */; };
-		4FC2A39516781AC500DC5D14 /* LibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC2A38016781AC500DC5D14 /* LibraryViewController.m */; };
-		4FC2A39616781AC500DC5D14 /* LibraryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FC2A38116781AC500DC5D14 /* LibraryViewController.xib */; };
 		4FC2A39716781AC500DC5D14 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC2A38316781AC500DC5D14 /* ProfileViewController.m */; };
 		4FC2A39816781AC500DC5D14 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FC2A38416781AC500DC5D14 /* ProfileViewController.xib */; };
 		4FC2A39916781AC500DC5D14 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC2A38616781AC500DC5D14 /* SettingsViewController.m */; };
@@ -111,14 +105,17 @@
 		4FDEED8516829F510019DE39 /* ScrollViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEED8316829F510019DE39 /* ScrollViewViewController.xib */; };
 		4FF3D600168E8BEE006D6D65 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3D5FE168E8BEE006D6D65 /* WebViewController.m */; };
 		4FF3D601168E8BEE006D6D65 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF3D5FF168E8BEE006D6D65 /* WebViewController.xib */; };
-		4FF979EB1688F88E00DAD71F /* TableScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF979E91688F88E00DAD71F /* TableScrollViewController.m */; };
-		4FF979EC1688F88E00DAD71F /* TableScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF979EA1688F88E00DAD71F /* TableScrollViewController.xib */; };
+		4FF979EB1688F88E00DAD71F /* LibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF979E91688F88E00DAD71F /* LibraryViewController.m */; };
+		4FF979EC1688F88E00DAD71F /* LibraryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF979EA1688F88E00DAD71F /* LibraryViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4F0754D216911CAA00C28E63 /* HomeScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScrollViewController.h; sourceTree = "<group>"; };
-		4F0754D316911CAA00C28E63 /* HomeScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScrollViewController.m; sourceTree = "<group>"; };
-		4F0754D416911CAA00C28E63 /* HomeScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScrollViewController.xib; sourceTree = "<group>"; };
+		4F0754D216911CAA00C28E63 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ../HomeViewController.h; sourceTree = "<group>"; };
+		4F0754D316911CAA00C28E63 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ../HomeViewController.m; sourceTree = "<group>"; };
+		4F0754D416911CAA00C28E63 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = ../HomeViewController.xib; sourceTree = "<group>"; };
+		4F105044169F9E640099D3F7 /* HomeTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeTableCell.xib; path = HIED/HomeTableCell.xib; sourceTree = SOURCE_ROOT; };
+		4F105046169F9FCE0099D3F7 /* HomeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeTableCell.h; path = HIED/HomeTableCell.h; sourceTree = SOURCE_ROOT; };
+		4F105047169F9FCE0099D3F7 /* HomeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTableCell.m; path = HIED/HomeTableCell.m; sourceTree = SOURCE_ROOT; };
 		4F38E04A16914AC10040D089 /* Hied_icon_sepia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hied_icon_sepia.png; sourceTree = "<group>"; };
 		4F87B0D9169E31220029557C /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
 		4F87B0DA169E31220029557C /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
@@ -192,26 +189,14 @@
 		4FC2A32F16781A2B00DC5D14 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		4FC2A33116781A2B00DC5D14 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		4FC2A33316781A2B00DC5D14 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		4FC2A34016781A5B00DC5D14 /* VDTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDTAppDelegate.h; sourceTree = "<group>"; };
-		4FC2A34116781A5B00DC5D14 /* VDTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDTAppDelegate.m; sourceTree = "<group>"; };
-		4FC2A34216781A5B00DC5D14 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
-		4FC2A34316781A5B00DC5D14 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
-		4FC2A34416781A5B00DC5D14 /* ArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleViewController.xib; sourceTree = "<group>"; };
-		4FC2A34816781A5B00DC5D14 /* PullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullViewController.h; sourceTree = "<group>"; };
-		4FC2A34916781A5B00DC5D14 /* PullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullViewController.m; sourceTree = "<group>"; };
-		4FC2A34A16781A5B00DC5D14 /* PullViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PullViewController.xib; sourceTree = "<group>"; };
+		4FC2A34016781A5B00DC5D14 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4FC2A34116781A5B00DC5D14 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4FC2A37616781AC500DC5D14 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		4FC2A37716781AC500DC5D14 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		4FC2A37816781AC500DC5D14 /* LeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
-		4FC2A37916781AC500DC5D14 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		4FC2A37A16781AC500DC5D14 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		4FC2A37B16781AC500DC5D14 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		4FC2A37C16781AC500DC5D14 /* StarredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarredViewController.h; sourceTree = "<group>"; };
 		4FC2A37D16781AC500DC5D14 /* StarredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarredViewController.m; sourceTree = "<group>"; };
 		4FC2A37E16781AC500DC5D14 /* StarredViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarredViewController.xib; sourceTree = "<group>"; };
-		4FC2A37F16781AC500DC5D14 /* LibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryViewController.h; sourceTree = "<group>"; };
-		4FC2A38016781AC500DC5D14 /* LibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryViewController.m; sourceTree = "<group>"; };
-		4FC2A38116781AC500DC5D14 /* LibraryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LibraryViewController.xib; sourceTree = "<group>"; };
 		4FC2A38216781AC500DC5D14 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		4FC2A38316781AC500DC5D14 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		4FC2A38416781AC500DC5D14 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
@@ -234,15 +219,15 @@
 		4FC2A3AE16781B0700DC5D14 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		4FC2A3AF16781B0700DC5D14 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
 		4FC2A3B816781B4400DC5D14 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		4FDEED8116829F510019DE39 /* ScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollViewViewController.h; path = Hied/ScrollViewViewController.h; sourceTree = "<group>"; };
-		4FDEED8216829F510019DE39 /* ScrollViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrollViewViewController.m; path = Hied/ScrollViewViewController.m; sourceTree = "<group>"; };
-		4FDEED8316829F510019DE39 /* ScrollViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScrollViewViewController.xib; path = Hied/ScrollViewViewController.xib; sourceTree = "<group>"; };
+		4FDEED8116829F510019DE39 /* ScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewViewController.h; sourceTree = "<group>"; };
+		4FDEED8216829F510019DE39 /* ScrollViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewViewController.m; sourceTree = "<group>"; };
+		4FDEED8316829F510019DE39 /* ScrollViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollViewViewController.xib; sourceTree = "<group>"; };
 		4FF3D5FD168E8BEE006D6D65 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		4FF3D5FE168E8BEE006D6D65 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		4FF3D5FF168E8BEE006D6D65 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
-		4FF979E81688F88D00DAD71F /* TableScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableScrollViewController.h; sourceTree = "<group>"; };
-		4FF979E91688F88E00DAD71F /* TableScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableScrollViewController.m; sourceTree = "<group>"; };
-		4FF979EA1688F88E00DAD71F /* TableScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableScrollViewController.xib; sourceTree = "<group>"; };
+		4FF979E81688F88D00DAD71F /* LibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LibraryViewController.h; path = ../LibraryViewController.h; sourceTree = "<group>"; };
+		4FF979E91688F88E00DAD71F /* LibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LibraryViewController.m; path = ../LibraryViewController.m; sourceTree = "<group>"; };
+		4FF979EA1688F88E00DAD71F /* LibraryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LibraryViewController.xib; path = ../LibraryViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,14 +254,34 @@
 			name = "App Icon";
 			sourceTree = "<group>";
 		};
+		4FA59D08169F8A2100BCDC95 /* Placeholders */ = {
+			isa = PBXGroup;
+			children = (
+				4FF3D5FD168E8BEE006D6D65 /* WebViewController.h */,
+				4FF3D5FE168E8BEE006D6D65 /* WebViewController.m */,
+				4FF3D5FF168E8BEE006D6D65 /* WebViewController.xib */,
+				4FC2A37C16781AC500DC5D14 /* StarredViewController.h */,
+				4FC2A37D16781AC500DC5D14 /* StarredViewController.m */,
+				4FC2A37E16781AC500DC5D14 /* StarredViewController.xib */,
+				4FC2A38516781AC500DC5D14 /* SettingsViewController.h */,
+				4FC2A38616781AC500DC5D14 /* SettingsViewController.m */,
+				4FC2A38716781AC500DC5D14 /* SettingsViewController.xib */,
+				4FC2A38216781AC500DC5D14 /* ProfileViewController.h */,
+				4FC2A38316781AC500DC5D14 /* ProfileViewController.m */,
+				4FC2A38416781AC500DC5D14 /* ProfileViewController.xib */,
+			);
+			name = Placeholders;
+			sourceTree = "<group>";
+		};
 		4FC2A30E16781A2B00DC5D14 = {
 			isa = PBXGroup;
 			children = (
+				4FC2A35216781A9600DC5D14 /* Always Updated UI Elements */,
+				4FA59D08169F8A2100BCDC95 /* Placeholders */,
 				4F87B0E1169E31560029557C /* App Icon */,
 				4FC2A3A316781AE800DC5D14 /* EGOPullToRefresh */,
 				4FC2A39F16781AD300DC5D14 /* DejalActivityView */,
 				4FC2A37516781AAB00DC5D14 /* ViewDeck */,
-				4FC2A35216781A9600DC5D14 /* Always Updated UI Elements */,
 				4FC2A32316781A2B00DC5D14 /* Hied */,
 				4FC2A31C16781A2B00DC5D14 /* Frameworks */,
 				4FC2A31A16781A2B00DC5D14 /* Products */,
@@ -305,14 +310,20 @@
 		4FC2A32316781A2B00DC5D14 /* Hied */ = {
 			isa = PBXGroup;
 			children = (
-				4FC2A34016781A5B00DC5D14 /* VDTAppDelegate.h */,
-				4FC2A34116781A5B00DC5D14 /* VDTAppDelegate.m */,
-				4FC2A34216781A5B00DC5D14 /* ArticleViewController.h */,
-				4FC2A34316781A5B00DC5D14 /* ArticleViewController.m */,
-				4FC2A34416781A5B00DC5D14 /* ArticleViewController.xib */,
-				4FC2A34816781A5B00DC5D14 /* PullViewController.h */,
-				4FC2A34916781A5B00DC5D14 /* PullViewController.m */,
-				4FC2A34A16781A5B00DC5D14 /* PullViewController.xib */,
+				4FC2A34016781A5B00DC5D14 /* AppDelegate.h */,
+				4FC2A34116781A5B00DC5D14 /* AppDelegate.m */,
+				4F0754D216911CAA00C28E63 /* HomeViewController.h */,
+				4F0754D316911CAA00C28E63 /* HomeViewController.m */,
+				4F0754D416911CAA00C28E63 /* HomeViewController.xib */,
+				4F105046169F9FCE0099D3F7 /* HomeTableCell.h */,
+				4F105047169F9FCE0099D3F7 /* HomeTableCell.m */,
+				4F105044169F9E640099D3F7 /* HomeTableCell.xib */,
+				4FF979E81688F88D00DAD71F /* LibraryViewController.h */,
+				4FF979E91688F88E00DAD71F /* LibraryViewController.m */,
+				4FF979EA1688F88E00DAD71F /* LibraryViewController.xib */,
+				4FDEED8116829F510019DE39 /* ScrollViewViewController.h */,
+				4FDEED8216829F510019DE39 /* ScrollViewViewController.m */,
+				4FDEED8316829F510019DE39 /* ScrollViewViewController.xib */,
 				4FC2A32416781A2B00DC5D14 /* Supporting Files */,
 			);
 			path = Hied;
@@ -401,24 +412,6 @@
 				4FC2A37616781AC500DC5D14 /* LeftViewController.h */,
 				4FC2A37716781AC500DC5D14 /* LeftViewController.m */,
 				4FC2A37816781AC500DC5D14 /* LeftViewController.xib */,
-				4F0754D216911CAA00C28E63 /* HomeScrollViewController.h */,
-				4F0754D316911CAA00C28E63 /* HomeScrollViewController.m */,
-				4F0754D416911CAA00C28E63 /* HomeScrollViewController.xib */,
-				4FC2A37916781AC500DC5D14 /* HomeViewController.h */,
-				4FC2A37A16781AC500DC5D14 /* HomeViewController.m */,
-				4FC2A37B16781AC500DC5D14 /* HomeViewController.xib */,
-				4FC2A37C16781AC500DC5D14 /* StarredViewController.h */,
-				4FC2A37D16781AC500DC5D14 /* StarredViewController.m */,
-				4FC2A37E16781AC500DC5D14 /* StarredViewController.xib */,
-				4FC2A37F16781AC500DC5D14 /* LibraryViewController.h */,
-				4FC2A38016781AC500DC5D14 /* LibraryViewController.m */,
-				4FC2A38116781AC500DC5D14 /* LibraryViewController.xib */,
-				4FC2A38216781AC500DC5D14 /* ProfileViewController.h */,
-				4FC2A38316781AC500DC5D14 /* ProfileViewController.m */,
-				4FC2A38416781AC500DC5D14 /* ProfileViewController.xib */,
-				4FC2A38516781AC500DC5D14 /* SettingsViewController.h */,
-				4FC2A38616781AC500DC5D14 /* SettingsViewController.m */,
-				4FC2A38716781AC500DC5D14 /* SettingsViewController.xib */,
 				4FC2A38816781AC500DC5D14 /* IIViewDeckController.h */,
 				4FC2A38916781AC500DC5D14 /* IIViewDeckController.m */,
 				4FC2A38A16781AC500DC5D14 /* WrapController.h */,
@@ -426,15 +419,6 @@
 				4FC2A38C16781AC500DC5D14 /* ViewController.h */,
 				4FC2A38D16781AC500DC5D14 /* ViewController.m */,
 				4FC2A38E16781AC500DC5D14 /* ViewController.xib */,
-				4FDEED8116829F510019DE39 /* ScrollViewViewController.h */,
-				4FDEED8216829F510019DE39 /* ScrollViewViewController.m */,
-				4FDEED8316829F510019DE39 /* ScrollViewViewController.xib */,
-				4FF979E81688F88D00DAD71F /* TableScrollViewController.h */,
-				4FF979E91688F88E00DAD71F /* TableScrollViewController.m */,
-				4FF979EA1688F88E00DAD71F /* TableScrollViewController.xib */,
-				4FF3D5FD168E8BEE006D6D65 /* WebViewController.h */,
-				4FF3D5FE168E8BEE006D6D65 /* WebViewController.m */,
-				4FF3D5FF168E8BEE006D6D65 /* WebViewController.xib */,
 			);
 			name = ViewDeck;
 			sourceTree = "<group>";
@@ -529,12 +513,8 @@
 				4FC2A33016781A2B00DC5D14 /* Default.png in Resources */,
 				4FC2A33216781A2B00DC5D14 /* Default@2x.png in Resources */,
 				4FC2A33416781A2B00DC5D14 /* Default-568h@2x.png in Resources */,
-				4FC2A34D16781A5B00DC5D14 /* ArticleViewController.xib in Resources */,
-				4FC2A35116781A5B00DC5D14 /* PullViewController.xib in Resources */,
 				4FC2A39016781AC500DC5D14 /* LeftViewController.xib in Resources */,
-				4FC2A39216781AC500DC5D14 /* HomeViewController.xib in Resources */,
 				4FC2A39416781AC500DC5D14 /* StarredViewController.xib in Resources */,
-				4FC2A39616781AC500DC5D14 /* LibraryViewController.xib in Resources */,
 				4FC2A39816781AC500DC5D14 /* ProfileViewController.xib in Resources */,
 				4FC2A39A16781AC500DC5D14 /* SettingsViewController.xib in Resources */,
 				4FC2A39E16781AC500DC5D14 /* ViewController.xib in Resources */,
@@ -543,9 +523,9 @@
 				4FC2A3B616781B0700DC5D14 /* whiteArrow.png in Resources */,
 				4FC2A3B716781B0700DC5D14 /* whiteArrow@2x.png in Resources */,
 				4FDEED8516829F510019DE39 /* ScrollViewViewController.xib in Resources */,
-				4FF979EC1688F88E00DAD71F /* TableScrollViewController.xib in Resources */,
+				4FF979EC1688F88E00DAD71F /* LibraryViewController.xib in Resources */,
 				4FF3D601168E8BEE006D6D65 /* WebViewController.xib in Resources */,
-				4F0754D616911CAA00C28E63 /* HomeScrollViewController.xib in Resources */,
+				4F0754D616911CAA00C28E63 /* HomeViewController.xib in Resources */,
 				4F38E04B16914AC10040D089 /* Hied_icon_sepia.png in Resources */,
 				4F87B0DD169E31220029557C /* blackArrow.png in Resources */,
 				4F87B0DE169E31220029557C /* blackArrow@2x.png in Resources */,
@@ -608,6 +588,7 @@
 				4F87B152169E32070029557C /* top_nav_lined@2x.png in Resources */,
 				4F87B153169E32070029557C /* top_nav.png in Resources */,
 				4F87B154169E32070029557C /* top_nav@2x.png in Resources */,
+				4F105045169F9E640099D3F7 /* HomeTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,13 +600,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FC2A32A16781A2B00DC5D14 /* main.m in Sources */,
-				4FC2A34B16781A5B00DC5D14 /* VDTAppDelegate.m in Sources */,
-				4FC2A34C16781A5B00DC5D14 /* ArticleViewController.m in Sources */,
-				4FC2A35016781A5B00DC5D14 /* PullViewController.m in Sources */,
+				4FC2A34B16781A5B00DC5D14 /* AppDelegate.m in Sources */,
 				4FC2A38F16781AC500DC5D14 /* LeftViewController.m in Sources */,
-				4FC2A39116781AC500DC5D14 /* HomeViewController.m in Sources */,
 				4FC2A39316781AC500DC5D14 /* StarredViewController.m in Sources */,
-				4FC2A39516781AC500DC5D14 /* LibraryViewController.m in Sources */,
 				4FC2A39716781AC500DC5D14 /* ProfileViewController.m in Sources */,
 				4FC2A39916781AC500DC5D14 /* SettingsViewController.m in Sources */,
 				4FC2A39B16781AC500DC5D14 /* IIViewDeckController.m in Sources */,
@@ -634,9 +611,10 @@
 				4FC2A3A216781ADD00DC5D14 /* DejalActivityView.m in Sources */,
 				4FC2A3A616781AF700DC5D14 /* EGORefreshTableHeaderView.m in Sources */,
 				4FDEED8416829F510019DE39 /* ScrollViewViewController.m in Sources */,
-				4FF979EB1688F88E00DAD71F /* TableScrollViewController.m in Sources */,
+				4FF979EB1688F88E00DAD71F /* LibraryViewController.m in Sources */,
 				4FF3D600168E8BEE006D6D65 /* WebViewController.m in Sources */,
-				4F0754D516911CAA00C28E63 /* HomeScrollViewController.m in Sources */,
+				4F0754D516911CAA00C28E63 /* HomeViewController.m in Sources */,
+				4F105048169F9FCF0099D3F7 /* HomeTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

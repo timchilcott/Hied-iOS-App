@@ -6,19 +6,19 @@
 //  Copyright (c) 2012 KK. All rights reserved.
 //
 
-#import "TableScrollViewController.h"
+#import "LibraryViewController.h"
 #import "IIViewDeckController.h"
-#import "ArticleViewController.h"
+//#import "ArticleViewController.h"
 #import "DejalActivityView.h"
 #import "ViewController.h"
 #import "EGORefreshTableHeaderView.h"
 #import "ScrollViewViewController.h"
 
-@interface TableScrollViewController ()
+@interface LibraryViewController ()
 
 @end
 
-@implementation TableScrollViewController
+@implementation LibraryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

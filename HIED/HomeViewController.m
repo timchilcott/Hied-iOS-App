@@ -6,20 +6,21 @@
 //  Copyright (c) 2012 KK. All rights reserved.
 //
 
-#import "HomeScrollViewController.h"
-#import "TableScrollViewController.h"
+#import "HomeViewController.h"
+#import "LibraryViewController.h"
 #import "IIViewDeckController.h"
-#import "ArticleViewController.h"
+//#import "ArticleViewController.h"
 #import "DejalActivityView.h"
 #import "ViewController.h"
 #import "EGORefreshTableHeaderView.h"
 #import "ScrollViewViewController.h"
+#import "HomeTableCell.h"
 
-@interface HomeScrollViewController ()
+@interface HomeViewController ()
 
 @end
 
-@implementation HomeScrollViewController
+@implementation HomeViewController
 
 
 - (void)viewDidLoad {
@@ -66,7 +67,7 @@
 {
     static UIImage* bgImage = nil;
     if (bgImage == nil) {
-        bgImage = [UIImage imageNamed:@"background_paper@2x.png"];
+        bgImage = [UIImage imageNamed:@"background_light_grey_noline@2x.png"];
     }
     cell.textLabel.backgroundColor = [UIColor clearColor];
     cell.detailTextLabel.backgroundColor = [UIColor clearColor];
@@ -113,14 +114,62 @@
 //    return 75;
 //}
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainCell"];
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainCell"];
+//    
+//    if(cell == nil){
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MainCell"];
+//    }
+//    cell.textLabel.text = [[news objectAtIndex:indexPath.row] objectForKey:@"title"];
+////    cell.detailTextLabel.text = [[news objectAtIndex:indexPath.row] objectForKey:@"published_on"];
+//    
+//    NSArray *paragraphs = [[newsArticle objectForKey:@"text_blocks"] valueForKey:@"TextBlock"];
+//    NSArray *quotes = [[newsArticle objectForKey:@"text_blocks"] valueForKey:@"QuoteBlock" ];
+//    
+//    NSMutableArray *joined = [[NSMutableArray alloc] init];
+//    for (int i = 0; i < paragraphs.count; i++){
+//        if ([paragraphs objectAtIndex:i] != [NSNull null]){
+//            [joined addObject:[paragraphs objectAtIndex:i]];
+//        }
+//        else if ([quotes objectAtIndex:i] != [NSNull null]){
+//            [joined addObject:[quotes objectAtIndex:i]];
+//        }
+//        else{
+//            [joined addObject:@"*****ERROR: NOTIFY KEVIN IF YOU SEE THIS"];
+//        }
+//    }
+//    
+//    cell.detailTextLabel.text = [joined componentsJoinedByString:@"\n\n"];
+//    cell.detailTextLabel.font = [UIFont fontWithName:@"palatino" size:14];
+//    
+////    cell.detailTextLabel.text = [[news objectAtIndex:indexPath.row] objectForKey:@"published_on"];
+//    return cell;
+//}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"HomeTableCell";
     
-    if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MainCell"];
+    HomeTableCell *cell = (HomeTableCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"HomeTableCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
-    cell.textLabel.text = [[news objectAtIndex:indexPath.row] objectForKey:@"title"];
-//    cell.detailTextLabel.text = [[news objectAtIndex:indexPath.row] objectForKey:@"published_on"];
+    
+    newsArticle = [news objectAtIndex:indexPath.row];
+    
+    cell.timeLabel.text = [newsArticle objectForKey:@"published_on"];
+    NSString *authorString = [[NSString alloc] initWithFormat:@"by: %@", [newsArticle objectForKey:@"author"]];
+    //    NSLog(@"%@", authorString);
+    NSString *nAString = @"by: N/A";
+    if ([authorString isEqualToString:nAString])
+        cell.authorLabel.text = @"by: unavailable";
+    else
+        cell.authorLabel.text = authorString;
+    cell.urlLabel.text = [newsArticle objectForKey:@"display_url"];
+    cell.topicLabel.text = [newsArticle objectForKey:@"topic"];
+    cell.topicLabel.layer.cornerRadius = 3;
     
     NSArray *paragraphs = [[newsArticle objectForKey:@"text_blocks"] valueForKey:@"TextBlock"];
     NSArray *quotes = [[newsArticle objectForKey:@"text_blocks"] valueForKey:@"QuoteBlock" ];
@@ -137,25 +186,92 @@
             [joined addObject:@"*****ERROR: NOTIFY KEVIN IF YOU SEE THIS"];
         }
     }
+
+    cell.titleLabel.text = [newsArticle objectForKey:@"title"];
+    cell.titleLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:22];
+
+    cell.articleLabel.text = [joined componentsJoinedByString:@"\n\n"];
+    cell.articleLabel.font = [UIFont fontWithName:@"palatino" size:14];
     
-    cell.detailTextLabel.text = [joined componentsJoinedByString:@"\n\n"];
-    cell.detailTextLabel.font = [UIFont fontWithName:@"palatino" size:14];
+    cell.starCSLabel.text = @"Star • Comment • Share";
+    cell.starCSLabel.font = [UIFont fontWithName:@"palatino" size:10];
     
-//    cell.detailTextLabel.text = [[news objectAtIndex:indexPath.row] objectForKey:@"published_on"];
+    cell.sponsorLabel.text = @"Sponsored by: BearRabbit";
+    cell.sponsorLabel.font = [UIFont fontWithName:@"palatino" size:10];
+    
+    cell.starCountLabel.text = @"15";
+    cell.starCountLabel.font = [UIFont fontWithName:@"palatino" size:10];
+    
+    cell.commentCountLabel.text = @"222";
+    cell.commentCountLabel.font = [UIFont fontWithName:@"palatino" size:10];
+
+    
+//    cell.timeLabel.text = [[news objectAtIndex:indexPath.row] objectForKey:@"published_on"];//@"time";
+//    cell.urlLabel.text = @"url.com";
+//    cell.authorLabel.text = @"chompsky";
+//    cell.topicLabel.text = @"BEES KNEES";
+//    cell.starCSLabel.text = @"blah blah shit";
+//    cell.sponsorLabel.text = @"Ben Affleck";
+//    cell.commentCountLabel.text = @"6";
+//    cell.starCountLabel.text = @"66";
+    
+//    cell.nameLabel.text = [tableData objectAtIndex:indexPath.row];
+//    cell.thumbnailImageView.image = [UIImage imageNamed:[thumbnails objectAtIndex:indexPath.row]];
+//    cell.prepTimeLabel.text = [prepTime objectAtIndex:indexPath.row];
+    
+    CGSize size = [cell.titleLabel.text sizeWithFont:cell.titleLabel.font constrainedToSize:CGSizeMake(cell.titleLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
+    cell.titleLabel.frame =   CGRectMake(cell.titleLabel.frame.origin.x,cell.titleLabel.frame.origin.y,cell.titleLabel.frame.size.width,size.height);
+    
+    size = [cell.articleLabel.text sizeWithFont:cell.articleLabel.font constrainedToSize:CGSizeMake(cell.articleLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
+    cell.articleLabel.frame =   CGRectMake(cell.articleLabel.frame.origin.x,cell.titleLabel.frame.origin.y+cell.titleLabel.frame.size.height+10,cell.articleLabel.frame.size.width,size.height);
+    
+    size = [cell.starCSLabel.text sizeWithFont:cell.starCSLabel.font constrainedToSize:CGSizeMake(cell.starCSLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
+    cell.starCSLabel.frame =   CGRectMake(cell.starCSLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+20,cell.starCSLabel.frame.size.width,size.height);
+    
+    size = [cell.starCountLabel.text sizeWithFont:cell.starCountLabel.font constrainedToSize:CGSizeMake(cell.starCountLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
+    cell.starCountLabel.frame =   CGRectMake(cell.starCountLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+20,cell.starCountLabel.frame.size.width,size.height);
+    
+    size = [cell.commentCountLabel.text sizeWithFont:cell.commentCountLabel.font constrainedToSize:CGSizeMake(cell.commentCountLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
+    cell.commentCountLabel.frame =   CGRectMake(cell.commentCountLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+20,cell.commentCountLabel.frame.size.width,size.height);
+    
+    size = [cell.sponsorLabel.text sizeWithFont:cell.sponsorLabel.font constrainedToSize:CGSizeMake(cell.sponsorLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
+    cell.sponsorLabel.frame =   CGRectMake(cell.sponsorLabel.frame.origin.x,cell.starCSLabel.frame.origin.y+cell.starCSLabel.frame.size.height+30,cell.sponsorLabel.frame.size.width,size.height);
+    
+    cell.smallCommentButton.frame = CGRectMake(cell.smallCommentButton.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+10,31,31);
+    
+    cell.smallStarButton.frame = CGRectMake(cell.smallStarButton.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+18,15,13);
+    
+    cell.commentCountLabel.frame = CGRectMake(cell.commentCountLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+18,15,13);
+    
+    cell.sponsorLabel.frame = CGRectMake(cell.sponsorLabel.frame.origin.x,cell.commentCountLabel.frame.origin.y+cell.commentCountLabel.frame.size.height+10,31,31);
+
+//    cellHeight = 0.0;
+//    
+//    for (UIView* view in cell.subviews)
+//        cellHeight += view.frame.size.height;
+//    
+//    cellHeight -= 30.0;
+//    
+////    NSLog(@"%f", cellHeight);
+//
+////    [cellHeightArray addObject:cellHeight];
+////    [key release];
+    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    //    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    //    NSString *devStateString = [defaults objectForKey:@"devState"];
-    //    NSLog(@"devstate = %@", devStateString);
+//    [self.navigationController setNavigationBarHidden:!self.navigationController.navigationBarHidden animated:YES];
     
-    //    NSLog(@"should show the scrollView");
-    ScrollViewViewController *scrollController = [[ScrollViewViewController alloc] initWithNibName:@"ScrollViewViewController" bundle:nil];
-    scrollController.title = [[news objectAtIndex:indexPath.row] objectForKey:@"title"];
-    scrollController.newsArticle = [news objectAtIndex:indexPath.row];
-    [self.navigationController pushViewController:scrollController animated:YES];
+//    //    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    //    NSString *devStateString = [defaults objectForKey:@"devState"];
+//    //    NSLog(@"devstate = %@", devStateString);
+//
+//    //    NSLog(@"should show the scrollView");
+//    ScrollViewViewController *scrollController = [[ScrollViewViewController alloc] initWithNibName:@"ScrollViewViewController" bundle:nil];
+//    scrollController.title = [[news objectAtIndex:indexPath.row] objectForKey:@"title"];
+//    [self.navigationController pushViewController:scrollController animated:YES];
 }
 
 #pragma mark -
@@ -233,6 +349,74 @@
 	_refreshHeaderView = nil;
 }
 
+- (CGFloat)measureTextHeight:(NSString*)text fontName:(NSString*)fontName fontSize:(CGFloat)fontSize constrainedToSize:(CGSize)constrainedToSize {
+    CGSize mTempSize = [text sizeWithFont:[UIFont fontWithName:fontName size:fontSize] constrainedToSize:constrainedToSize lineBreakMode:UILineBreakModeWordWrap];
+    return mTempSize.height;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    newsArticle = [news objectAtIndex:indexPath.row];
+    
+//    cell.timeLabel.text = [newsArticle objectForKey:@"published_on"];
+//    NSString *authorString = [[NSString alloc] initWithFormat:@"by: %@", [newsArticle objectForKey:@"author"]];
+//    NSLog(@"%@", authorString);
+//    NSString *nAString = @"by: N/A";
+//    if ([authorString isEqualToString:nAString])
+//        cell.authorLabel.text = @"by: unavailable";
+//    else
+//        cell.authorLabel.text = authorString;
+//    cell.urlLabel.text = [newsArticle objectForKey:@"display_url"];
+//    cell.topicLabel.text = [newsArticle objectForKey:@"topic"];
+//    cell.topicLabel.layer.cornerRadius = 3;
+    
+    NSArray *paragraphs = [[newsArticle objectForKey:@"text_blocks"] valueForKey:@"TextBlock"];
+    NSArray *quotes = [[newsArticle objectForKey:@"text_blocks"] valueForKey:@"QuoteBlock" ];
+    
+    NSMutableArray *joined = [[NSMutableArray alloc] init];
+    for (int i = 0; i < paragraphs.count; i++){
+        if ([paragraphs objectAtIndex:i] != [NSNull null]){
+            [joined addObject:[paragraphs objectAtIndex:i]];
+        }
+        else if ([quotes objectAtIndex:i] != [NSNull null]){
+            [joined addObject:[quotes objectAtIndex:i]];
+        }
+        else{
+            [joined addObject:@"*****ERROR: NOTIFY KEVIN IF YOU SEE THIS"];
+        }
+    }
+    
+//    cell.titleLabel.text = [newsArticle objectForKey:@"title"];
+//    cell.titleLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:22];
+//    
+//    cell.articleLabel.text = [joined componentsJoinedByString:@"\n\n"];
+//    cell.articleLabel.font = [UIFont fontWithName:@"palatino" size:14];
+//    
+//    cell.starCSLabel.text = @"Star • Comment • Share";
+//    cell.starCSLabel.font = [UIFont fontWithName:@"palatino" size:10];
+//    
+//    cell.sponsorLabel.text = @"Sponsored by: BearRabbit";
+//    cell.sponsorLabel.font = [UIFont fontWithName:@"palatino" size:10];
+//    
+//    cell.starCountLabel.text = @"15";
+//    cell.starCountLabel.font = [UIFont fontWithName:@"palatino" size:10];
+//    
+//    cell.commentCountLabel.text = @"222";
+//    cell.commentCountLabel.font = [UIFont fontWithName:@"palatino" size:10];
+    
+    int tempHeight = 0;
+    
+    tempHeight = [self measureTextHeight:[newsArticle objectForKey:@"title"] fontName:@"Palatino-Bold" fontSize:22 constrainedToSize:CGSizeMake(295, 1000000)];
+    
+    tempHeight += [self measureTextHeight:[joined componentsJoinedByString:@"\n\n"] fontName:@"palatino" fontSize:14 constrainedToSize:CGSizeMake(295, 1000000)];
+    
+    tempHeight += 300;
+    
+    cellHeight = tempHeight;
+    
+    NSLog(@"%f", cellHeight);
+    return cellHeight;
+}
 
 @end
 

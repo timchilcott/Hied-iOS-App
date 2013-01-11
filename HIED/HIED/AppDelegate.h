@@ -12,7 +12,7 @@
 @class TableScrollViewController;
 @class ScrollViewViewController;
 
-@interface VDTAppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 //@property (retain, nonatomic) UIViewController *centerController;

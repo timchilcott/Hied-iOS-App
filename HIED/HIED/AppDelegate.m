@@ -6,11 +6,11 @@
 //  Copyright (c) 2012 KK. All rights reserved.
 //
 
-#import "VDTAppDelegate.h"
+#import "AppDelegate.h"
 
-#import "PullViewController.h"
+//#import "PullViewController.h"
 #import "StarredViewController.h"
-#import "ArticleViewController.h"
+//#import "ArticleViewController.h"
 #import "IIViewDeckController.h"
 #import "LeftViewController.h"
 #import "ViewController.h"
@@ -18,11 +18,12 @@
 #import "LibraryViewController.h"
 #import "ProfileViewController.h"
 #import "SettingsViewController.h"
-#import "TableScrollViewController.h"
-#import "HomeScrollViewController.h"
+//#import "ScrollViewCellViewController.h"
+//#import "TableScrollViewController.h"
+//#import "HomeScrollViewController.h"
 //#import "ScrollViewViewController.h"
 
-@implementation VDTAppDelegate
+@implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize centerController = _centerController;
@@ -63,8 +64,15 @@
 //    PullViewController *centerController = [[PullViewController alloc] initWithNibName:@"PullViewController" bundle:nil];
 //    self.centerController = [[UINavigationController alloc] initWithRootViewController:centerController];
 
-    TableScrollViewController *centerController = [[TableScrollViewController alloc] initWithNibName:@"TableScrollViewController" bundle:nil];
+//    TableScrollViewController *centerController = [[TableScrollViewController alloc] initWithNibName:@"TableScrollViewController" bundle:nil];
+//    self.centerController = [[UINavigationController alloc] initWithRootViewController:centerController];
+    
+    
+//    LibraryViewController *centerController = [[LibraryViewController alloc] initWithNibName:@"LibraryViewController" bundle:nil];
+    
+    HomeViewController *centerController = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
     self.centerController = [[UINavigationController alloc] initWithRootViewController:centerController];
+
     
     IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:self.centerController
                                                                                     leftViewController:self.leftController
@@ -81,21 +89,21 @@
     switch (index) {
         case 0:
         {
-//            HomeViewController *centerController = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
-//            return [[UINavigationController alloc] initWithRootViewController:centerController];
-            
-            HomeScrollViewController *centerController = [[HomeScrollViewController alloc] initWithNibName:@"HomeScrollViewController" bundle:nil];
+            HomeViewController *centerController = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
             return [[UINavigationController alloc] initWithRootViewController:centerController];
+            
+//            HomeScrollViewController *centerController = [[HomeScrollViewController alloc] initWithNibName:@"HomeScrollViewController" bundle:nil];
+//            return [[UINavigationController alloc] initWithRootViewController:centerController];
         }
         case 1:{
             StarredViewController *centerController = [[StarredViewController alloc] initWithNibName:@"StarredViewController" bundle:nil];
             return [[UINavigationController alloc] initWithRootViewController:centerController];
         }
         case 2:{
-            TableScrollViewController *centerController = [[TableScrollViewController alloc] initWithNibName:@"TableScrollViewController" bundle:nil];
-            return [[UINavigationController alloc] initWithRootViewController:centerController];
-//            LibraryViewController *centerController = [[LibraryViewController alloc] initWithNibName:@"LibraryViewController" bundle:nil];
+//            TableScrollViewController *centerController = [[TableScrollViewController alloc] initWithNibName:@"TableScrollViewController" bundle:nil];
 //            return [[UINavigationController alloc] initWithRootViewController:centerController];
+            LibraryViewController *centerController = [[LibraryViewController alloc] initWithNibName:@"LibraryViewController" bundle:nil];
+            return [[UINavigationController alloc] initWithRootViewController:centerController];
         }
         case 3:{
             ProfileViewController *centerController = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];

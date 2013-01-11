@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "EGORefreshTableHeaderView.h"
 
-@interface HomeScrollViewController : UITableViewController <EGORefreshTableHeaderDelegate, UITableViewDelegate, UITableViewDataSource>{
+@interface HomeViewController : UITableViewController <EGORefreshTableHeaderDelegate, UITableViewDelegate, UITableViewDataSource>{
     
     //    IBOutlet UITableView *mainTableView;
     NSDictionary *newsArticle;
     
     NSArray *news;
+//    NSMutableArray *cellHeightArray;
     //    NSMutableArray *data;
     NSMutableData *data;
     
@@ -23,6 +24,7 @@
 	//  Reloading var should really be your tableviews datasource
 	//  Putting it here for demo purposes
 	BOOL _reloading;
+    CGFloat cellHeight;
 }
 
 - (void)reloadTableViewDataSource;
