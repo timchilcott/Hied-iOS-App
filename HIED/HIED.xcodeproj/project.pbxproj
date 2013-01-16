@@ -101,6 +101,7 @@
 		4FC2A3B616781B0700DC5D14 /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC2A3AE16781B0700DC5D14 /* whiteArrow.png */; };
 		4FC2A3B716781B0700DC5D14 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC2A3AF16781B0700DC5D14 /* whiteArrow@2x.png */; };
 		4FC2A3B916781B4400DC5D14 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC2A3B816781B4400DC5D14 /* QuartzCore.framework */; };
+		4FD60C7916A1EBF90033074D /* einstein.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FD60C7816A1EBF90033074D /* einstein.png */; };
 		4FDEED8416829F510019DE39 /* ScrollViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEED8216829F510019DE39 /* ScrollViewViewController.m */; };
 		4FDEED8516829F510019DE39 /* ScrollViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEED8316829F510019DE39 /* ScrollViewViewController.xib */; };
 		4FF3D600168E8BEE006D6D65 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3D5FE168E8BEE006D6D65 /* WebViewController.m */; };
@@ -219,6 +220,7 @@
 		4FC2A3AE16781B0700DC5D14 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		4FC2A3AF16781B0700DC5D14 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
 		4FC2A3B816781B4400DC5D14 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4FD60C7816A1EBF90033074D /* einstein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = einstein.png; sourceTree = "<group>"; };
 		4FDEED8116829F510019DE39 /* ScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewViewController.h; sourceTree = "<group>"; };
 		4FDEED8216829F510019DE39 /* ScrollViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewViewController.m; sourceTree = "<group>"; };
 		4FDEED8316829F510019DE39 /* ScrollViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollViewViewController.xib; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 		4FC2A30E16781A2B00DC5D14 = {
 			isa = PBXGroup;
 			children = (
+				4FD60C7616A1EBE50033074D /* shit */,
 				4FC2A35216781A9600DC5D14 /* Always Updated UI Elements */,
 				4FA59D08169F8A2100BCDC95 /* Placeholders */,
 				4F87B0E1169E31560029557C /* App Icon */,
@@ -457,6 +460,14 @@
 			name = arrows;
 			sourceTree = "<group>";
 		};
+		4FD60C7616A1EBE50033074D /* shit */ = {
+			isa = PBXGroup;
+			children = (
+				4FD60C7816A1EBF90033074D /* einstein.png */,
+			);
+			name = shit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -589,6 +600,7 @@
 				4F87B153169E32070029557C /* top_nav.png in Resources */,
 				4F87B154169E32070029557C /* top_nav@2x.png in Resources */,
 				4F105045169F9E640099D3F7 /* HomeTableCell.xib in Resources */,
+				4FD60C7916A1EBF90033074D /* einstein.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,9 +15,14 @@
     NSDictionary *newsArticle;
     
     NSArray *news;
-//    NSMutableArray *cellHeightArray;
-    //    NSMutableArray *data;
     NSMutableData *data;
+    NSDictionary *newsDic;//////
+//    NSDictionary *datasource;///////
+    NSString *tempTopic;
+    NSString *permTopic;
+    NSString *lastTempTopic;
+    NSMutableArray *topicList;
+    int numTopics;
     
 	EGORefreshTableHeaderView *_refreshHeaderView;
     
@@ -26,6 +31,9 @@
 	BOOL _reloading;
     CGFloat cellHeight;
 }
+
+@property (strong, nonatomic) NSDictionary *datasource;
+@property (strong, nonatomic) NSArray *sorted;
 
 - (void)reloadTableViewDataSource;
 - (void)doneLoadingTableViewData;

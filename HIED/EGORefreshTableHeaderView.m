@@ -102,8 +102,8 @@
 }
 
 - (id)initWithFrame:(CGRect)frame  {
-//  return [self initWithFrame:frame arrowImageName:@"blueArrow.png" textColor:TEXT_COLOR];
-  return [self initWithFrame:frame arrowImageName:@"rocket.png" textColor:TEXT_COLOR];
+  return [self initWithFrame:frame arrowImageName:@"blueArrow.png" textColor:TEXT_COLOR];
+//  return [self initWithFrame:frame arrowImageName:@"rocket.png" textColor:TEXT_COLOR];
 }
 
 #pragma mark -
@@ -166,7 +166,7 @@
 			break;
 		case EGOOPullRefreshLoading:
 
-			_statusLabel.text = NSLocalizedString(@"Hieding...", @"Loading Status");
+			_statusLabel.text = NSLocalizedString(@"Loading...", @"Loading Status");
 			[_activityView startAnimating];
 			[CATransaction begin];
 			[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions]; 

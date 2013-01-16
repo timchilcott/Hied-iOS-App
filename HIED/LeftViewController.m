@@ -76,7 +76,7 @@
 //    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     static UIImage* bgImage = nil;
     if (bgImage == nil) {
-        bgImage = [UIImage imageNamed:@"top_nav@2x.png"];
+        bgImage = [UIImage imageNamed:@"button_selected_bg@2x.png"];
     }
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:bgImage];
 //    cell.textLabel.backgroundColor = [UIColor clearColor];

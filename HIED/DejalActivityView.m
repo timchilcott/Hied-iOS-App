@@ -258,6 +258,7 @@ static DejalActivityView *dejalActivityView = nil;
 - (UIActivityIndicatorView *)makeActivityIndicator;
 {
     UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+//    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     
     [indicator startAnimating];
     

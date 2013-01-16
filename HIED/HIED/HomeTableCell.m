@@ -14,7 +14,7 @@
 //@synthesize nameLabel = _nameLabel;
 //@synthesize prepTimeLabel = _prepTimeLabel;
 //@synthesize thumbnailImageView = _thumbnailImageView;
-@synthesize newsArticle, titleLabel, articleLabel, timeLabel, urlLabel, authorLabel, topicLabel, starCSLabel, sponsorLabel, starLabel, smallCommentLabel, smallStarButton, smallCommentButton, comments, sponsor, star, smallComment;//starCountLabel, commentCountLabel, smallStarButton, smallCommentButton;
+@synthesize newsArticle, titleLabel, articleLabel, timeLabel, urlLabel, authorLabel, topicLabel, starCSLabel, sponsorLabel, starLabel, smallCommentLabel, smallStarButton, smallCommentButton, comments, sponsor, star, smallComment, sponsoredBy;//starCountLabel, commentCountLabel, smallStarButton, smallCommentButton;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

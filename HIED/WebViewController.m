@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     
     UIImage *settingsImage = [UIImage imageNamed:@"back_button@2x.png"];
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -44,6 +44,11 @@
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:webURL]]];
     webView.scalesPageToFit = YES;
     [self.view addSubview:webView];
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeLeft;
 }
 
 - (void)goBack

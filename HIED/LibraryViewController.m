@@ -44,7 +44,7 @@
 	//  update the last update date
 	[_refreshHeaderView refreshLastUpdatedDate];
     
-    [DejalBezelActivityView activityViewForView:self.view withLabel:@"Hieding!"];
+    [DejalBezelActivityView activityViewForView:self.view withLabel:@"Loading"];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     NSURL *url = [NSURL URLWithString:@"http://hied.herokuapp.com/articles/published.json"];
