@@ -15,12 +15,16 @@
     NSDictionary *newsArticle;
     
     NSArray *news;
+    NSArray *numRowsPerm;
     NSMutableData *data;
-    NSDictionary *newsDic;//////
+//    NSDictionary *newsDic;//////
 //    NSDictionary *datasource;///////
     NSString *tempTopic;
     NSString *permTopic;
     NSString *lastTempTopic;
+    NSMutableArray *topicToSection;
+    NSMutableArray *numRows;
+    
     NSMutableArray *topicList;
     int numTopics;
     
@@ -32,8 +36,9 @@
     CGFloat cellHeight;
 }
 
-@property (strong, nonatomic) NSDictionary *datasource;
-@property (strong, nonatomic) NSArray *sorted;
+//@property (strong, nonatomic) NSDictionary *datasource;
+////@property (strong, nonatomic) NSMutableArray *numRows;
+//@property (strong, nonatomic) NSArray *sorted;
 
 - (void)reloadTableViewDataSource;
 - (void)doneLoadingTableViewData;

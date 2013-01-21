@@ -20,7 +20,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *urlLabel;
 @property (strong, nonatomic) IBOutlet UILabel *authorLabel;
-@property (strong, nonatomic) IBOutlet UILabel *topicLabel;
+//@property (strong, nonatomic) IBOutlet UILabel *topicLabel;
 @property (strong, nonatomic) IBOutlet UILabel *starCSLabel;
 @property (strong, nonatomic) IBOutlet UILabel *sponsorLabel;
 @property (strong, nonatomic) IBOutlet UILabel *sponsoredBy;
@@ -34,5 +34,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *sponsor;
 @property (strong, nonatomic) IBOutlet UIButton *star;
 @property (strong, nonatomic) IBOutlet UIButton *smallComment;
+@property (strong, nonatomic) IBOutlet UIImageView *articleBG;
 
 @end

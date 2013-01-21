@@ -14,7 +14,7 @@
 //@synthesize nameLabel = _nameLabel;
 //@synthesize prepTimeLabel = _prepTimeLabel;
 //@synthesize thumbnailImageView = _thumbnailImageView;
-@synthesize newsArticle, titleLabel, articleLabel, timeLabel, urlLabel, authorLabel, topicLabel, starCSLabel, sponsorLabel, starLabel, smallCommentLabel, smallStarButton, smallCommentButton, comments, sponsor, star, smallComment, sponsoredBy;//starCountLabel, commentCountLabel, smallStarButton, smallCommentButton;
+@synthesize newsArticle, titleLabel, articleLabel, timeLabel, urlLabel, authorLabel, starCSLabel, sponsorLabel, starLabel, smallCommentLabel, smallStarButton, smallCommentButton, comments, sponsor, star, smallComment, sponsoredBy;//starCountLabel, commentCountLabel, smallStarButton, smallCommentButton;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -35,6 +35,12 @@
     }
     
     return self;
+}
+
+- (void)setFrame:(CGRect)frame {
+    frame.origin.x += 10;
+    frame.size.width -= 2 * 10;
+    [super setFrame:frame];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
