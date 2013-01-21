@@ -16,7 +16,8 @@
 		4F87B0DE169E31220029557C /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F87B0DA169E31220029557C /* blackArrow@2x.png */; };
 		4F87B0DF169E31220029557C /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F87B0DB169E31220029557C /* blueArrow.png */; };
 		4F87B0E0169E31220029557C /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F87B0DC169E31220029557C /* blueArrow@2x.png */; };
-		4F87B0E4169E31CE0029557C /* hied_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F87B0E2169E317E0029557C /* hied_icon.png */; };
+		4F87B0E4169E31CE0029557C /* hied_icon_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F87B0E2169E317E0029557C /* hied_icon_dark.png */; };
+		4FB7DD3F16AD1EDD006618D0 /* hied_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB7DD3E16AD1EDD006618D0 /* hied_icon.png */; };
 		4FC2A31E16781A2B00DC5D14 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC2A31D16781A2B00DC5D14 /* UIKit.framework */; };
 		4FC2A32016781A2B00DC5D14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC2A31F16781A2B00DC5D14 /* Foundation.framework */; };
 		4FC2A32216781A2B00DC5D14 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC2A32116781A2B00DC5D14 /* CoreGraphics.framework */; };
@@ -116,7 +117,8 @@
 		4F87B0DA169E31220029557C /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
 		4F87B0DB169E31220029557C /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
 		4F87B0DC169E31220029557C /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
-		4F87B0E2169E317E0029557C /* hied_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hied_icon.png; sourceTree = "<group>"; };
+		4F87B0E2169E317E0029557C /* hied_icon_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hied_icon_dark.png; sourceTree = "<group>"; };
+		4FB7DD3E16AD1EDD006618D0 /* hied_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hied_icon.png; sourceTree = "<group>"; };
 		4FC2A31916781A2B00DC5D14 /* Hied.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hied.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC2A31D16781A2B00DC5D14 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4FC2A31F16781A2B00DC5D14 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -238,8 +240,9 @@
 		4F87B0E1169E31560029557C /* App Icon */ = {
 			isa = PBXGroup;
 			children = (
+				4FB7DD3E16AD1EDD006618D0 /* hied_icon.png */,
 				4F38E04A16914AC10040D089 /* Hied_icon_sepia.png */,
-				4F87B0E2169E317E0029557C /* hied_icon.png */,
+				4F87B0E2169E317E0029557C /* hied_icon_dark.png */,
 			);
 			name = "App Icon";
 			sourceTree = "<group>";
@@ -532,7 +535,7 @@
 				4F87B0DE169E31220029557C /* blackArrow@2x.png in Resources */,
 				4F87B0DF169E31220029557C /* blueArrow.png in Resources */,
 				4F87B0E0169E31220029557C /* blueArrow@2x.png in Resources */,
-				4F87B0E4169E31CE0029557C /* hied_icon.png in Resources */,
+				4F87B0E4169E31CE0029557C /* hied_icon_dark.png in Resources */,
 				4F105045169F9E640099D3F7 /* HomeTableCell.xib in Resources */,
 				4FD60C7916A1EBF90033074D /* einstein.png in Resources */,
 				4FCE23A216AD1C7500C53F02 /* article_bg.png in Resources */,
@@ -585,6 +588,7 @@
 				4FCE23D116AD1C7500C53F02 /* topic_bg@2x.png in Resources */,
 				4FCE23D216AD1C7500C53F02 /* unread_indicator.png in Resources */,
 				4FCE23D316AD1C7500C53F02 /* unread_indicator@2x.png in Resources */,
+				4FB7DD3F16AD1EDD006618D0 /* hied_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
