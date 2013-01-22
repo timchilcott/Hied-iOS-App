@@ -41,7 +41,7 @@
     
     static UIImage* bgImage = nil;
     if (bgImage == nil) {
-        bgImage = [UIImage imageNamed:@"menu_bg@2x.png"];
+        bgImage = [UIImage imageNamed:@"menu_view_bg@2x.png"];
     }
     [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:bgImage]];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
@@ -76,7 +76,7 @@
 //    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     static UIImage* bgImage = nil;
     if (bgImage == nil) {
-        bgImage = [UIImage imageNamed:@"button_selected_bg@2x.png"];
+        bgImage = [UIImage imageNamed:@"menu_selected@2x.png"];
     }
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:bgImage];
 //    cell.textLabel.backgroundColor = [UIColor clearColor];

@@ -73,10 +73,10 @@
     if (bgImage == nil) {
         bgImage = [UIImage imageNamed:@"background_light_grey_noline@2x.png"];
     }
-    cell.backgroundColor = [UIColor clearColor];
-    cell.textLabel.backgroundColor = [UIColor clearColor];
+//    cell.backgroundColor = [UIColor clearColor];
+//    cell.textLabel.backgroundColor = [UIColor clearColor];
 //    cell.textLabel.backgroundColor = [UIColor whiteColor];
-    cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+//    cell.detailTextLabel.backgroundColor = [UIColor clearColor];
 //    cell.detailTextLabel.backgroundColor = [UIColor whiteColor];
 //    cell.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
 //    cell.backgroundView = [[UIColor]]
@@ -95,6 +95,8 @@
         sbgImage = [UIImage imageNamed:@"button_selected_bg@2x.png"];
     }
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:bgImage];
+//    cell.selectedBackgroundView = [[]
+    
 //    cell.selectedBackgroundView = [UIColor clearColor];
     //    cell.textLabel.backgroundColor = [UIColor clearColor];
     //    cell.textLabel.textColor = [UIColor lightGrayColor];
@@ -401,21 +403,21 @@
     cell.sponsoredBy.text = @"Sponsored by:";
     cell.sponsoredBy.font = [UIFont fontWithName:@"palatino" size:10];
     
-    cell.starLabel.text = @"15";
-    cell.starLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:10];
-    
-    cell.smallCommentLabel.text = @"222";
-    cell.smallCommentLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:10];
+//    cell.starLabel.text = @"15";
+//    cell.starLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:10];
+//    
+//    cell.smallCommentLabel.text = @"222";
+//    cell.smallCommentLabel.font = [UIFont fontWithName:@"Palatino-Bold" size:10];
     
     // TIME
     CGSize size = [cell.timeLabel.text sizeWithFont:cell.timeLabel.font constrainedToSize:CGSizeMake(cell.timeLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
 //    cell.timeLabel.frame = CGRectMake(0,3,300,30);
-    cell.timeLabel.frame = CGRectMake(cell.frame.origin.x,cell.frame.origin.y,300,30);
+    cell.timeLabel.frame = CGRectMake(cell.frame.origin.x,cell.frame.origin.y+1.5,300,30);
     
     // AUTHOR
     size = [cell.authorLabel.text sizeWithFont:cell.authorLabel.font constrainedToSize:CGSizeMake(cell.authorLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
 //    cell.authorLabel.frame =   CGRectMake(0,60,300,30);//CGRectMake(cell.authorLabel.frame.origin.x,cell.timeLabel.frame.origin.y+20,cell.timeLabel.frame.size.width,size.height);
-    cell.authorLabel.frame =   CGRectMake(cell.authorLabel.frame.origin.x,cell.frame.origin.y+20,cell.authorLabel.frame.size.width,size.height);
+    cell.authorLabel.frame =   CGRectMake(cell.authorLabel.frame.origin.x,cell.frame.origin.y+60,cell.authorLabel.frame.size.width,size.height);
     
     // URL
     size = [cell.urlLabel.text sizeWithFont:cell.urlLabel.font constrainedToSize:CGSizeMake(cell.urlLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
@@ -429,26 +431,28 @@
     size = [cell.articleLabel.text sizeWithFont:cell.articleLabel.font constrainedToSize:CGSizeMake(cell.articleLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
     cell.articleLabel.frame =   CGRectMake(cell.articleLabel.frame.origin.x,cell.titleLabel.frame.origin.y+cell.titleLabel.frame.size.height+10,cell.articleLabel.frame.size.width,size.height);
     
-    cell.articleBG.frame = CGRectMake(0,0,300,cell.timeLabel.frame.size.height+cell.authorLabel.frame.size.height+cell.urlLabel.frame.size.height+cell.titleLabel.frame.size.height+cell.articleLabel.frame.size.height+125);
+    // WHITE BACKGROUND
+    cell.articleBG.frame = CGRectMake(0,40,300,cell.timeLabel.frame.size.height+cell.authorLabel.frame.size.height+cell.urlLabel.frame.size.height+cell.titleLabel.frame.size.height+cell.articleLabel.frame.size.height+90);
     
     // STAR COMMENT SHARE
     size = [cell.starCSLabel.text sizeWithFont:cell.starCSLabel.font constrainedToSize:CGSizeMake(cell.starCSLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
-    cell.starCSLabel.frame =   CGRectMake(cell.starCSLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+20,cell.starCSLabel.frame.size.width,size.height);
+    cell.starCSLabel.frame =   CGRectMake(cell.starCSLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+40,cell.starCSLabel.frame.size.width,30/*size.height*/);
     
-    // STAR LABEL
-    size = [cell.starLabel.text sizeWithFont:cell.starLabel.font constrainedToSize:CGSizeMake(cell.starLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
-    cell.starLabel.frame =   CGRectMake(cell.starLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+20,cell.starLabel.frame.size.width,size.height);
+//    // STAR LABEL
+//    size = [cell.starLabel.text sizeWithFont:cell.starLabel.font constrainedToSize:CGSizeMake(cell.starLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
+//    cell.starLabel.frame =   CGRectMake(cell.starLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+20,cell.starLabel.frame.size.width,size.height);
     
-    // COMMENT LABEL
-    size = [cell.smallCommentLabel.text sizeWithFont:cell.smallCommentLabel.font constrainedToSize:CGSizeMake(cell.smallCommentLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
-    cell.smallCommentLabel.frame =   CGRectMake(cell.smallCommentLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+20,cell.smallCommentLabel.frame.size.width,size.height);
+//    // COMMENT LABEL
+//    size = [cell.smallCommentLabel.text sizeWithFont:cell.smallCommentLabel.font constrainedToSize:CGSizeMake(cell.smallCommentLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
+//    cell.smallCommentLabel.frame =   CGRectMake(cell.smallCommentLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+20,cell.smallCommentLabel.frame.size.width,size.height);
     
-    
+    // Sponsor Label
     size = [cell.sponsorLabel.text sizeWithFont:cell.sponsorLabel.font constrainedToSize:CGSizeMake(cell.sponsorLabel.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
-    cell.sponsorLabel.frame =   CGRectMake(cell.sponsorLabel.frame.origin.x,cell.starCSLabel.frame.origin.y+cell.starCSLabel.frame.size.height+30,cell.sponsorLabel.frame.size.width,size.height);
+    cell.sponsorLabel.frame =   CGRectMake(cell.sponsorLabel.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+10,cell.sponsorLabel.frame.size.width,30/*size.height*//*cell.sponsorLabel.frame.origin.x,cell.starCSLabel.frame.origin.y+cell.starCSLabel.frame.size.height+10,cell.sponsorLabel.frame.size.width,size.height*/);
     
+    // Sponsor Ad
     size = [cell.sponsoredBy.text sizeWithFont:cell.sponsoredBy.font constrainedToSize:CGSizeMake(cell.sponsoredBy.frame.size.width, FLT_MAX) lineBreakMode:UILineBreakModeWordWrap ];
-    cell.sponsoredBy.frame =   CGRectMake(cell.sponsoredBy.frame.origin.x,cell.starCSLabel.frame.origin.y+cell.starCSLabel.frame.size.height+30,cell.sponsoredBy.frame.size.width,size.height);
+    cell.sponsoredBy.frame =   CGRectMake(cell.sponsoredBy.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+10,cell.sponsoredBy.frame.size.width,30/*cell.sponsoredBy.frame.origin.x,cell.starCSLabel.frame.origin.y+cell.starCSLabel.frame.size.height+10,cell.sponsoredBy.frame.size.width,size.height*/);
     
 //    cell.comments.frame = CGRectMake(cell.comments.frame.origin.x,cell.articleLabel.frame.origin.y+cell.articleLabel.frame.size.height+10,31,31);
 //
