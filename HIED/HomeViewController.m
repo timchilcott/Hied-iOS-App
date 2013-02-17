@@ -120,23 +120,33 @@
     [DejalBezelActivityView removeViewAnimated:YES];
     
     
-    int occurrences = 0;
-    for(NSString *string in topicToSection){
-        occurrences += ([string isEqualToString:@"Ernest Hemingway"]?1:0); //certain object is @"Apple"
-    }
-    NSLog(@"ernest hemingway =  %d", occurrences);
-
-    occurrences = 0;
-    for(NSString *string in topicToSection){
-        occurrences += ([string isEqualToString:@"Easter Island"]?1:0); //certain object is @"Apple"
-    }
-    NSLog(@"easter island =  %d", occurrences);
-
-    occurrences = 0;
-    for(NSString *string in topicToSection){
-        occurrences += ([string isEqualToString:@"Founding Fathers"]?1:0); //certain object is @"Apple"
-    }
-    NSLog(@"founding fathers =  %d", occurrences);
+    
+    
+//    [news enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop){
+//        
+//    }
+    
+    
+    
+    
+    
+//    int occurrences = 0;
+//    for(NSString *string in topicToSection){
+//        occurrences += ([string isEqualToString:@"Ernest Hemingway"]?1:0); //certain object is @"Apple"
+//    }
+//    NSLog(@"ernest hemingway =  %d", occurrences);
+//
+//    occurrences = 0;
+//    for(NSString *string in topicToSection){
+//        occurrences += ([string isEqualToString:@"Easter Island"]?1:0); //certain object is @"Apple"
+//    }
+//    NSLog(@"easter island =  %d", occurrences);
+//
+//    occurrences = 0;
+//    for(NSString *string in topicToSection){
+//        occurrences += ([string isEqualToString:@"Founding Fathers"]?1:0); //certain object is @"Apple"
+//    }
+//    NSLog(@"founding fathers =  %d", occurrences);
 
     
     

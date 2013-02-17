@@ -58,18 +58,18 @@
     
 }
 
--(void)  tableView:(UITableView*)tableView
-   willDisplayCell:(UITableViewCell*)cell
- forRowAtIndexPath:(NSIndexPath*)indexPath;
-{
-    static UIImage* bgImage = nil;
-    if (bgImage == nil) {
-        bgImage = [UIImage imageNamed:@"background_paper@2x.png"];
-    }
-    cell.textLabel.backgroundColor = [UIColor clearColor];
-    cell.detailTextLabel.backgroundColor = [UIColor clearColor];
-    cell.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
-}
+//-(void)  tableView:(UITableView*)tableView
+//   willDisplayCell:(UITableViewCell*)cell
+// forRowAtIndexPath:(NSIndexPath*)indexPath;
+//{
+//    static UIImage* bgImage = nil;
+//    if (bgImage == nil) {
+//        bgImage = [UIImage imageNamed:@"background_paper@2x.png"];
+//    }
+//    cell.textLabel.backgroundColor = [UIColor clearColor];
+//    cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+//    cell.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
+//}
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
     data = [[NSMutableData alloc] init];
